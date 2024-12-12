@@ -2,7 +2,8 @@
 module.exports = {
   content: [
     "./index.html",          
-      "./style/**/*.css"      
+      "./style/**/*.css",
+      "./js/**/*.js"     
   ],
   theme: {
     extend: {
@@ -11,6 +12,9 @@ module.exports = {
       },
       width:{
         'custom-Cat':'135px',
+      },
+      backgroundColor:{
+        'custom-indigo':'rgb(51 49 94)',
       },
     },
   },
