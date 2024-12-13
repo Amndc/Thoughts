@@ -15,7 +15,12 @@ module.exports = {
       },
       backgroundColor:{
         'custom-indigo':'rgb(51 49 94)',
+        'custom-yellow':'rgba(242, 212, 39, 0.4)',
+        'custom-orange':'rgba(224, 131, 38, 0.4)',
+        'custom-purple':'rgba(90, 35, 161, 0.4)',
+        'custom-cyan':'rgba(38, 193, 224, 0.4)',
       },
+      
     },
   },
   plugins: [],
