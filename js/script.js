@@ -25,19 +25,26 @@ function createCardThoughts(id){
 
 function generateCard(ThougthLocal, id){
 
-    var output = `<div class="bg-custom-indigo rounded-xl h-[240px] w-full shadow-custom-sw grid grid-rows-3 gap-4 truncate">
-                       
-                        <div class="grid grid-cols-4 truncate">
-                            <h1 class=" col-span-2 text-slate-300 text-nowrap truncate text-xl indent-2 mt-4 ml-2" title="${ThougthLocal.title}">
-                            <i class="font-bold text-indigo-950">_</i>${ThougthLocal.title}</h1>
-                            <div class="flex justify-center"> ${setCategory(ThougthLocal.Category)} </div>
+    var output = `<section class="bg-custom-indigo rounded-xl h-[240px] w-full shadow-custom-sw grid grid-rows-3 gap-4 truncate">                    
+                        <div class="grid grid-cols-3 truncate">
+                             <div class="ml-1 mt-1 float-left bg-custom-purple border-2 border-purple-800  rounded-tl-xl rounded-br-[999px]  w-[32px] h-[32px]">
+                             </div>
+
+                             <div class="truncate indent-2 mt-4 ml-2 text-nowrap">                                
+                                <i class="font-bold text-indigo-950 text-xl absolute">_</i>                                   
+                                <h1 class="text-slate-300 text-xl ml-[18px]" title="${ThougthLocal.title}"> ${ThougthLocal.title}</h1>
+                            </div>
+
                             <h1 class="text-white/45  text-right  text-xl font-light mr-3 mt-1 cursor-pointer" onclick="RemoveIt(${id})">X</h1>
+
                         </div> 
 
                         <label class="text-gray-200 break-words whitespace-normal ml-8 text-xl font-sans p-3 truncate">
                                  ${ThougthLocal.Txt}
-                        </label>                                                                
-                    </div>`
+                        </label>
+                        
+                        
+                    </section>`
     return output
 }
 
