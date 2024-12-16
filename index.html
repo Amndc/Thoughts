@@ -6,45 +6,49 @@
     <title>thoughts</title>
     <link href="dist/output.css" rel="stylesheet">
     <script src="js/script.js" ></script>
-</head>
-<body class="p-5 bg-indigo-950 font-mono justify-center">
     
 
-<div id="Container-Top" class="p-24 truncate
-    w-[95%] h-[700px]  border-4 
-    border-indigo-300/  
+</head>
+<body  class="p-5 bg-indigo-950 font-mono justify-center  overflow-x-hidden">
+<div id="particles-js" class="m-auto w-full h-full absolute -z-10"></div>
+<form id="form-Top" class=" 
+    truncate
+    p-5
+    w-full h-[700px] 
+    border-4 border-indigo-300
     rounded-xl bg-violet-50 
-    grid grid-cols-1 
-    
-    sm:grid-rows-2 
-    sm:h-[500px] 
-    md:h-[350] 
-    xl:h-72 
-    sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-2 
-   
-    gap-4    
-    place-items-center">
+    grid grid-cols-1     
+     
+    sm:h-[700px] 
+    sm:grid-cols-1
+    md:p-5
+    md:h-[288px]    
+    md:grid-cols-2
+    md:gap-0
+    xl:grid-cols-2 
+    xl:h-72  
+    ">
 
     <!-- Seção de Inserção -->
     <section id="InsertArea" class="w-full p-4 grid grid-rows-2">
+      <h1 for="txtNew" class="text-2xl font-bold mb-4">Insert your thoughts</h1>
 
-      <h1 for="txtNew" class="text-xl font-semibold mb-4">Insert your thoughts</h1>
+        <input type="text" maxlength="125" placeholder="The Title" id="titleThoughts" name="titleThoughts" class="p-1 rounded-md border-2 border-gray-700">
+        <textarea id="txtNew" name="txtNew" placeholder="Description" class="
+                max-h-20  
+                rounded-md border-2 border-gray-700                  
+                w-full
+                text-slate-500 mt-4 p-2" rows="3" maxlength="125"></textarea>
+                <small >Caracteres restantes: <span id="charCount">125</span></small>
 
-        <input type="text" placeholder="The Title" id="titleThoughts" name="titleThoughts" class="p-2 rounded-md border-2 border-gray-700 ">
-
-        <textarea id="txtNew" name="txtNew" class="max-h-48 min-h-20   
-                rounded-md border-2 border-gray-700  
-                blocknpx tailwindcss -i ./style/main.css -o ./disst/output.css --watch
-                w-full text-sm 
-                text-slate-500 mt-4 p-2" rows="3" placeholder="Description"></textarea>
     </section>
 
     <!-- Seção de Opções -->
-    <section id="Options" class="w-full truncate p-4 grid grid-rows-3 gap-6">
+    <section id="Options" class="w-full truncate p-4 grid grid-rows-3 gap-6 justify-items-center">
 
-    <div class="row-span-2">
-        <h1 for="categorias" class="text-xl font-semibold">Choose a Category</h1>
-        <div class="mt-4 place-content-center grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-4 w-[360px]">
+    <div class="row-span-2 ">
+        <h1 for="categorias" class="text-2xl font-bold">Choose a Category</h1>
+        <div class="mt-4 place-content-center grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-4">
             <label class="flex items-center 
             space-x-2 border-2
              border-yellow-500 
@@ -77,19 +81,30 @@
              border-cyan-500   
              rounded-md bg-cyan-100    
              p-1 cursor-pointer w-custom-Cat">
-                <input value="Daydreams" type="radio" name="category" class="ml-1 form-radio appearance-none w-3 h-3 border-2 rounded-full border-cyan-500 bg-white checked:bg-cyan-500">
-                <span>Daydreams</span>
+                <input value="Random" type="radio" name="category" class="ml-1 form-radio appearance-none w-3 h-3 border-2 rounded-full border-cyan-500 bg-white checked:bg-cyan-500">
+                <span>Random</span>
             </label>
 
         </div>
     </div>
-        <button class="rounded-xl bg-indigo-900 p-2 text-white w-72" onclick="NewThought()">Launch into the Universe</button>
+
+       
+        <button type="submit" class="overflow-hidden relative w-full p-2 h-12 bg-indigo-950  text-white border-none rounded-md text-xl font-bold cursor-pointer z-10 group" >
+            Launch into the Universe!
+        <span class="absolute w-full h-32 -top-8 -left-0 bg-white  transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-1000"></span>
+        <span class="absolute w-full h-32 -top-8 -left-0 bg-indigo-400  transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700"></span>
+        <span class="absolute w-full h-32 -top-8 -left-0 bg-indigo-600  transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500"></span>
+        <span class="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute top-2.5 z-10 inset-0">Launch into the Universe!</span>
+      </button>
+    
+    
+    
     </section>
 
-</div>
+</form>
     <div id="Universe" class="grid grid-cols-1 gap-4 w-full mt-10 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
-
-
     </div>
+    <script src="js/particles.js-master/particles.js"></script>
+    <script src="js/particles.js-master/demo/js/app.js"></script>
 </body>
 </html>
