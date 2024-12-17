@@ -16,5 +16,5 @@ Clone este repositório.
 Instale as dependências.
 Execute o projeto localmente e experimente criar suas próprias notas!  
 
-##💡 Sobre o autor ##
+### 💡 Sobre o autor ###
 Este projeto é um estudo pessoal, feito para aprendizado e diversão. Sugestões e feedbacks são sempre bem-vindos!
